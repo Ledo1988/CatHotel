@@ -29,6 +29,24 @@
         }
     }
 
+    &--yellow {
+        background-color: $color-saffronMango;
+        color: $color-primary;
+
+        &:hover {
+            background-color: #eaba5d;
+        }
+    }
+
+    &--yellow-border {
+        border: 2px solid $color-saffronMango;
+        color: $color-primary;
+
+        &:hover {
+            background-color: $color-saffronMango;
+        }
+    }
+
     &--transparent {
         color: $color-codGray;
         background-color: transparent;

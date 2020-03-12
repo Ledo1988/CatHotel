@@ -5,7 +5,6 @@ input,
 textarea {
     font-family: $font-primary;
     font-size: 14px;
-    letter-spacing: 0.18px;
     color: $color-primary;
     background: none;
     border: 0;
@@ -51,6 +50,12 @@ textarea {
     }
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 button,
 button[disabled] {
     cursor: default;
@@ -64,17 +69,17 @@ label {
 //Fast-fix ENDs
 
 input {
-    padding: $grid-unit*3 14px $grid-unit*3 8px;
-    border: 1px solid $color-primary;
-    border-radius: 3px;
-    font-size: 16px;
-    color:$color-codGray;
-    background: $color-primary;
+    padding: 4px 5px 1px 5px;
+    border: 1px solid $color-mercury;
+    font-size: 14px;
+    line-height: 1;
+    color:$color-primary;
+    background: $color-white;
     transition: $transition;
     cursor: auto;
 
     &::placeholder {
-        color:$color-codGray;
+        color:$color-mercury;
     }
 
     &:active, &:focus, &:hover {
@@ -83,32 +88,6 @@ input {
 
     &::-ms-clear {
         display: none;
-    }
-}
-
-.input--wrapper {
-    margin-bottom: $grid-unit*3;
-
-    @media (max-width:375px) {
-        margin-bottom: 16px;
-    }
-
-    label {
-        display: block;
-        margin-bottom: $grid-unit;
-        font-family: $font-secondary;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: $grid-unit*3;
-        cursor: auto;
-
-        &.input__label--required {
-
-            &:after {
-                content: ' *';
-                color:$color-codGray;
-            }
-        }
     }
 }
 
@@ -158,73 +137,6 @@ textarea {
     }
 }
 
-
-.input-animated {
-    position: relative;
-    margin-bottom: $grid-unit*3;
-
-    &.not-empty {
-
-        .input-animated__item {
-            padding: 20px 14px 10px 8px;
-            border-color:$color-codGray;
-        }
-
-        .input-animated__label {
-            top: 6px;
-            font-size: 10px;
-        }
-
-        .input-animated__empty {
-            opacity: 1;
-            pointer-events: auto;
-        }
-    }
-
-
-    &__item {
-        padding: $grid-unit*3 14px $grid-unit*3 8px;
-        width: 100%;
-        min-height: 50px;
-        transition: $transition;
-    }
-
-    &__label {
-        position: absolute;
-        top: 18px;
-        left: 8px;
-        margin: 0;
-        width: auto;
-        font-size: 16px;
-        color: $color-codGray;
-        transition: $transition;
-        cursor: text;
-        user-select: none;
-        z-index: 2;
-    }
-
-    &__empty {
-        position: absolute;
-        top: 15px;
-        right: 10px;
-        display: block;
-        width: $grid-unit*4;
-        height: $grid-unit*4;
-        padding: $grid-unit;
-        opacity: 0;
-        transition: $transition;
-        pointer-events: none;
-
-        svg.icon {
-            fill: $color-codGray;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-
-}
-
 .checkbox {
     display: flex;
     align-items: center;
@@ -240,14 +152,14 @@ textarea {
         @media (min-width: $md) {
             &:hover {
                 ~ label::before {
-                    background-color: rgba(68, 136, 187, 0.5);
+                    border-color: $color-codGray;
                 }
             } 
         }
 
         &:checked {
             ~ label::before {
-                background-color: $color-codGray;
+                border-color: $color-codGray;
             }
 
             ~ label::after {
@@ -263,18 +175,17 @@ textarea {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        font-size: 16px;
-        color: $color-codGray;
+        font-size: 14px;
+        color: $color-primary;
 
         &:before {
             content: '';
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             box-sizing: border-box;
-            border: 1px solid transparent;
-            border-radius: 3px;
-            margin-right: 8px;
-            background: $color-primary;
+            border: 1px solid $color-mercury;
+            margin-right: $grid-unit*2;
+            background: $color-white;
             transition: $transition;
             flex-shrink: 0;
         }
@@ -283,17 +194,14 @@ textarea {
             content: '';
             position: absolute;
             left: 7px;
-            top: 3px;
+            top: 4px;
             width: 5px;
-            height: 10px;
-            border: solid $color-white;
-            border-width: 0 2px 2px 0;
+            height: 8px;
+            border: solid $color-codGray;
+            border-width: 0 1px 1px 0;
             transform: rotate(45deg);
             transition: $transition;
             opacity: 0;
         }
-
-
     }
-
 }

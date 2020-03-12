@@ -1,0 +1,27 @@
+.catalog__filter
+	form.catalog__filter-form
+		.catalog__filter-item
+			.catalog__filter-title Цена за сутки,₽
+			.catalog__filter-inputs--wrapper
+				+input-rate("catalog__filter", "min-rate", "", "min-rate")
+				+input-rate("catalog__filter", "max-rate", "", "max-rate")
+		.catalog__filter-item
+			.catalog__filter-title Площадь
+			.catalog__filter-checkboxes--wrapper
+				+input__checkbox("square_1", "catalog__filter", "square_1", "", "0,63 м2")
+				+input__checkbox("square_2", "catalog__filter", "square_2", "", "0,90 м2")
+				+input__checkbox("square_3", "catalog__filter", "square_3", "", "1,13 м2")
+				+input__checkbox("square_4", "catalog__filter", "square_4", "", "1,56 м2")
+				+input__checkbox("square_5", "catalog__filter", "square_5", "", "2,56 м2")
+				+input__checkbox("square_6", "catalog__filter", "square_6", "", "2,88 м2")
+		.catalog__filter-item
+			.catalog__filter-title Оснащение номера
+			.catalog__filter-checkboxes--wrapper
+				+input__checkbox("equipment_1", "catalog__filter", "equipment_1", "", "Пустой номер")
+				+input__checkbox("equipment_2", "catalog__filter", "equipment_2", "", "Лежак")
+				+input__checkbox("equipment_3", "catalog__filter", "equipment_3", "", "Когтеточка")
+				+input__checkbox("equipment_4", "catalog__filter", "equipment_4", "", "Игровой-комплекс")
+				+input__checkbox("equipment_5", "catalog__filter", "equipment_5", "", "Домик")
+		.catalog__filter-item.catalog__filter-item--btns
+			button.catalog__filter-btn.button.button--block.button--yellow(type="submit") Применить
+			button.catalog__filter-btn.button.button--block.button--yellow-border(type="reset") Сбросить фильтр

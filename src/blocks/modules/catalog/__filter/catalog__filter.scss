@@ -1,0 +1,63 @@
+.catalog__filter {
+    flex-shrink: 0;
+    width: 210px;
+    margin-right: 90px;
+
+    &-item {
+        margin-bottom: $grid-unit*7;
+    }
+
+    &-title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        margin-bottom: $grid-unit*4;
+    }
+
+    &-inputs--wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-label-content {
+        width: calc((100% - 15px)/2);
+    }
+
+    &-label {
+        position: relative;
+        cursor: auto;
+
+        &[for="min-rate"]:before {
+            content: "от";
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 7px;
+        }
+
+        &[for="max-rate"]:before {
+            content: "до";
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 7px;
+        }
+    }
+
+    &-input {
+        width: 100%;
+        padding-left: 25px;
+    }
+
+    &-checkbox {
+        margin-bottom: $grid-unit*3;
+    }
+
+    &-btn {
+        margin-bottom: $grid-unit*3;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

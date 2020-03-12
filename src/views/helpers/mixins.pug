@@ -1,24 +1,19 @@
 mixin list-item(className, name, href)
 	li(class=className)
-		a(href=href class=className + '-link')= name
+		a(href=href class=className + "-link")= name
 
 mixin input(idName, value, type, name, required, placeholder)
 	.label-content
 		label(for=idName)
 			input(id=idName value=value type=type name=name required=required placeholder=placeholder)
 
-mixin input-animated(idName, className, value, type, name, labelContent)
-	.input-animated(class=className)
-		input(id=idName class='input-animated__item' value=value type=type name=name)
-		label(for=idName class='input-animated__label')=labelContent
-		a.input-animated__empty(href="javascript:void(0);")
-			svg(class="icon")
-				use(xlink:href="/img/sprites/sprite.svg#ico_close")
-		span.input-animated__error
-			block
+mixin input-rate(className, idName, value, name)
+	.label-content(class=className + "-label-content")
+		label(for=idName class=className + "-label")
+			input(class=className + "-input" id=idName value=value type="number" name=name)
 
 mixin input__checkbox(idName, className, name, value, Title)
-	.checkbox(class=className)
-		input(id=idName class="checkbox__input" type="checkbox" name=name value=value)
-		label(for=idName class="checkbox__label")
-			span(class="checkbox__title")=Title
+	.checkbox(class=className + "-checkbox")
+		input(id=idName class="checkbox__input" class=className + "-checkbox-input" type="checkbox" name=name value=value)
+		label(for=idName class="checkbox__label" class=className + "-checkbox-label")
+			span(class="checkbox__title" class=className + "-checkbox-title")=Title

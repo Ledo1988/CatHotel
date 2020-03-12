@@ -2,6 +2,11 @@
     @include container-fluid;
     margin-bottom: 50px;
 
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &--wrapper {
         @include container;
     }
