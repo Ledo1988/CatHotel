@@ -3,26 +3,26 @@
 	.catalog__header-sort.header-sort
 		.header-sort--wrapper
 			ul.header-sort__list
-				li.header-sort__list-item
-					button(class="btn header-sort__btn" data-sort-direction="asc" data-sort-value="original-order" type="button")
+				li.header-sort__list-item.active
+					button(class="btn header-sort__btn" data-sort="square:descc" type="button")
 						span.header-sort__icon
 							svg(class="icon header-sort__icon-svg")
 								use(xlink:href="/img/sprites/sprite.svg#ico_arrow-up")
 						span.header-sort__title По площади
 				li.header-sort__list-item
-					button(class="btn header-sort__btn header-sort__btn--less" data-sort-direction="asc" data-sort-value="original-order" type="button")
+					button(class="btn header-sort__btn header-sort__btn--less" data-sort="square:asc" type="button")
 						span.header-sort__icon
 							svg(class="icon header-sort__icon-svg")
 								use(xlink:href="/img/sprites/sprite.svg#ico_arrow-up")
 						span.header-sort__title По площади
 				li.header-sort__list-item
-					button(class="btn header-sort__btn" data-sort-direction="asc" data-sort-value="original-order" type="button")
+					button(class="btn header-sort__btn" data-sort="rate:desc" type="button")
 						span.header-sort__icon
 							svg(class="icon header-sort__icon-svg")
 								use(xlink:href="/img/sprites/sprite.svg#ico_arrow-up")
 						span.header-sort__title По цене
 				li.header-sort__list-item
-					button(class="btn header-sort__btn header-sort__btn--less" data-sort-direction="asc" data-sort-value="original-order" type="button")
+					button(class="btn header-sort__btn header-sort__btn--less" data-sort="rate:asc" type="button")
 						span.header-sort__icon
 							svg(class="icon header-sort__icon-svg")
 								use(xlink:href="/img/sprites/sprite.svg#ico_arrow-up")
