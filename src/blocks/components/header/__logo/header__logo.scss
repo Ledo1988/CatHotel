@@ -1,0 +1,9 @@
+.header__logo {
+    flex-shrink: 0;
+    margin-right: $grid-unit*6;
+
+    &--wrapper {
+        width: 63px;
+        height: 52px;
+    }
+}

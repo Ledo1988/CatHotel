@@ -1,0 +1,14 @@
+.header {
+  @include container-fluid;
+  margin-bottom: 100px;
+  background-color: $color-white;
+
+  &--wrapper {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
