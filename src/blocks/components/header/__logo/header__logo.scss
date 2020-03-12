@@ -2,7 +2,8 @@
     flex-shrink: 0;
     margin-right: $grid-unit*6;
 
-    &--wrapper {
+    &-link {
+        display: block;
         width: 63px;
         height: 52px;
     }
