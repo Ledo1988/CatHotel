@@ -68,7 +68,6 @@
             right: 0;
             width: 100%;
             height: auto;
-            max-height: 155px;
             padding: 0 $grid-unit*4;
             transition: $transition;
             background: #ffffff;
@@ -77,8 +76,8 @@
         }
 
         &__list-item {
-            order: 2;
             padding: 12px 0;
+            order: 2;
 
             &.active {
                 order: 1;

@@ -77,8 +77,8 @@
         }
 
         &__list-item {
-            order: 2;
             padding: 12px 0;
+            order: 2;
 
             &.active {
                 order: 1;
