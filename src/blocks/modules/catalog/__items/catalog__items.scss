@@ -1,0 +1,7 @@
+.catalog__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 -3*$grid-unit;
+}

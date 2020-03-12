@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 60px;
 
     .header-sort {
         position: relative;
@@ -36,8 +37,8 @@
 
         &__icon {
             display: block;
-            width: $grid-unit;
-            height: $grid-unit*2;
+            width: 7px;
+            height: 12px;
             margin-right: $grid-unit;
         }
 
