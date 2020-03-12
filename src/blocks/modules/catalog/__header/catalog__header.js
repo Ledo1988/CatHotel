@@ -19,26 +19,24 @@ $(document).ready(function() {
                 if (!$(this).parents('.header-sort__list-item').hasClass('active') && $(this).parents('.header-sort').hasClass('active')) {
                     const selectedOption = $select.find(".header-sort__list-item.active .header-sort__btn").attr("data-sort");
                     sortColumns(settings.elToSort, selectedOption);
-                    console.log(settings.elToSort);
                 }
 
             });
 
             function sortColumns(el, opt) {
                 const attr = "data-" + opt.split(":")[0];
-                const sortMethod = (opt.includes("asc")) ? ascOrder : descOrder;
-                const sign = (opt.includes("asc")) ? "" : "-";
-
+                const sortMethod = (opt.indexOf("asc") > 0) ? ascOrder : descOrder;
+                const sign = (opt.indexOf("asc") > 0) ? "" : "-";
                 const sortArray = $(el).map((i, el) => parseFloat($(el).attr(attr).replace(/,/g, '.'))).sort(sortMethod);
-                console.log(sortArray);
+
 
                 for (let i = 0; i < sortArray.length; i++) {
                     if (parseInt(sortArray[i]) != sortArray[i]) {
                         sortArray[i] = sortArray[i].toFixed(2).toString().replace(".", ",");
-                        $(el).filter(`[${attr}="${sortArray[i]}"]`).css("order", sign + parseInt(sortArray[i].replace(",", "")));
-                        console.log(sortArray[i]);
+                        $(el).filter(`[${attr}="${sortArray[i]}"]`).css("order", sign + parseInt(sortArray[i].replace(",", "")),
+							"-ms-flex-order", sign + parseInt(sortArray[i].replace(",", "")));
                     } else {
-                        $(el).filter(`[${attr}="${sortArray[i]}"]`).css("order", sign + sortArray[i]);
+                        $(el).filter(`[${attr}="${sortArray[i]}"]`).css("order", sign + sortArray[i], "-ms-flex-order", sign + sortArray[i]);
                     }
 
 
