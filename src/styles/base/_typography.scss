@@ -1,0 +1,42 @@
+h1, .h1 {
+    font-family: $font-secondary;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: $grid-unit*8;
+    margin-top: 0;
+
+    @media (min-width: $md) {
+        font-size: 36px;
+    }
+
+    @media (min-width: $l) {
+        margin-bottom: 25px;
+        font-size: 40px;
+    }
+
+    @media (min-width: $xl) {
+        font-size: 48px;
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+p {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: $grid-unit;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: $transition;
+}

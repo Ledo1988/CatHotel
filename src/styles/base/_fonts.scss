@@ -1,0 +1,41 @@
+$path: '/fonts/';
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: normal;
+  src: url($path + 'Lato-Regular.woff2') format("woff2"),
+       url($path + 'Lato-Regular.woff') format("woff");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  src: url($path + 'Lato-Medium.woff2') format("woff2"),
+  url($path + 'Lato-Medium.woff') format("woff");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  src: url($path + 'Lato-Semibold.woff2') format("woff2"),
+  url($path + 'Lato-Semibold.woff') format("woff");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url($path + 'Rubik-Medium.woff2') format("woff2"),
+  url($path + 'Rubik-Medium.woff') format("woff");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url($path + 'Rubik-Bold.woff2') format("woff2"),
+  url($path + 'Rubik-Bold.woff') format("woff");
+}

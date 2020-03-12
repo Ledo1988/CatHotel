@@ -1,0 +1,39 @@
+//Media
+$hd: 1440px;
+$xl: 1280px;
+$l: 1024px;
+$md: 768px;
+$sm: 576px;
+$s: 320px;
+
+//Colors
+$color-black: #000000;
+$color-white: #ffffff;
+
+$color-primary: #1A212F;
+
+$color-codGray: #141312;
+$color-mercury: #E1E1E1;
+$color-boulder: #777777;
+$color-romance: #FFFEFD;
+$color-burningOrange: #FF7236;
+$color-saffronMango: #FAC663;
+
+//Fonts
+$font-primary: "Lato";
+$font-secondary: "Rubik";
+
+//Grid
+$grid-unit: 5px;
+$col-hd-extra: $grid-unit*13;
+$col-hd: $grid-unit*11;
+$col-xl: $grid-unit*9;
+$col-l: $grid-unit*6;
+$col-md: $grid-unit*10;
+$col-s: $grid-unit*6;
+
+//Animation
+$transition: .2s ease-in-out;
+
+
+
