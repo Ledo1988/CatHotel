@@ -5,21 +5,22 @@
         display: flex;
         justify-content: flex-end;
     }
-}
 
-.nav-list {
-    &__item {
-        margin-left: $grid-unit*6;
-        font-weight: 600;
-        font-size: 16px;
-    }
-    &__item-link {
-        display: inline-block;
-        border-bottom: 1px solid transparent;
-        transition: $transition;
+    .nav-list {
+        &__item {
+            margin-left: $grid-unit*6;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        &__item-link {
+            display: inline-block;
+            border-bottom: 1px solid transparent;
+            transition: $transition;
 
-        &:hover, &:focus {
-            border-bottom: 1px solid $color-boulder;
+            &:hover, &:focus {
+                border-bottom: 1px solid $color-boulder;
+            }
         }
     }
 }
+

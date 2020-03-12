@@ -1,1 +1,1 @@
-import "%modules%/header/header";
+import "%modules%/catalogue/__header/catalogue__header";

@@ -1,0 +1,8 @@
+.catalogue {
+    @include container-fluid;
+    margin-bottom: 50px;
+
+    &--wrapper {
+        @include container;
+    }
+}
