@@ -19,7 +19,6 @@ html {
 
 body {
     font-family: $font-primary;
-
     font-weight: normal;
     font-size: 14px;
     line-height: 1;
@@ -30,6 +29,10 @@ body {
     text-rendering: optimizeSpeed;
     margin: 0;
     overflow-x: hidden;
+
+    @media (max-width: 768px) {
+        padding-top: 116px;
+    }
 }
 
 img {

@@ -1,13 +1,11 @@
-modules.define('header__nav', ['i-bem-dom'], function(provide, bemDom) {
+import $ from "jquery";
 
-provide(bemDom.declElem('header', 'nav', {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
+$(document).ready(function() {
+
+    $('body').on('click', '.burger-menu', function() {
+        $(this).parents('.header').toggleClass('open');
+        $('body').toggleClass('overflow-hidden');
+        $('html').toggleClass('overflow-hidden');
+    });
 
 });
