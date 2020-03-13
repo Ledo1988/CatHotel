@@ -3,7 +3,7 @@
     width: 210px;
     margin-right: 90px;
 
-    @media (max-width: 768px) {
+    @media (max-width: $md) {
         display: none;
 
         &.open {
@@ -12,7 +12,7 @@
             left: 0;
             display: block;
             height: 100vh;
-            width: 100vh;
+            width: 100vw;
             overflow: scroll;
             background-color: $color_white;
             z-index: 99999;
@@ -80,7 +80,7 @@
     &-form-mobile {
         display: none;
 
-        @media (max-width: 768px) {
+        @media (max-width: $md) {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -91,7 +91,7 @@
     }
 
     &-form {
-        @media (max-width: 768px) {
+        @media (max-width: $md) {
             padding: $grid-unit*3;
         }
     }

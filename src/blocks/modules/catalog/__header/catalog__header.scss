@@ -4,7 +4,7 @@
     justify-content: space-between;
     margin-bottom: 60px;
 
-    @media (max-width: 768px) {
+    @media (max-width: $md) {
         margin-bottom: 40px;
     }
 
@@ -18,6 +18,11 @@
         height: 30px;
         overflow-y: hidden;
         transition: $transition;
+
+        @media (max-width: $md) {
+            width: 140px;
+            min-width: 140px;
+        }
 
         &__header {
             display: flex;
@@ -41,6 +46,10 @@
             height: 6px;
             transform: rotate(180deg);
             transition: $transition;
+
+            @media (max-width: $md) {
+                right: 10px;
+            }
         }
 
         &__icon {
@@ -82,6 +91,10 @@
             background: #ffffff;
             box-shadow: 0 2px 12px rgba(173, 152, 143, 0);
             border-radius: 4px;
+
+            @media (max-width: $md) {
+                padding: 0 $grid-unit*2;
+            }
         }
 
         &__list-item {

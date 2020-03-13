@@ -30,7 +30,7 @@ body {
     margin: 0;
     overflow-x: hidden;
 
-    @media (max-width: 768px) {
+    @media (max-width: $md) {
         padding-top: 116px;
     }
 }

@@ -7,14 +7,14 @@
   top: 0;
   z-index: 9999;
 
-  @media (max-width: 768px) {
+  @media (max-width: $md) {
     position: fixed;
     margin-bottom: 40px;
 
     &.open {
       position: fixed;
       height: 100vh;
-      width: 100vh;
+      width: 100vw;
       overflow: hidden;
       background-color: $color_white;
 

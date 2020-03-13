@@ -6,7 +6,7 @@
         display: flex;
         justify-content: space-between;
 
-        @media (max-width: 768px) {
+        @media (max-width: $md) {
             display: block;
         }
     }
@@ -14,7 +14,7 @@
     &__mobile {
         display: none;
 
-        @media (max-width: 768px) {
+        @media (max-width: $md) {
             display: block;
             margin-bottom: 20px;
         }

@@ -6,7 +6,12 @@ h1, .h1 {
     margin-bottom: $grid-unit*4;
     margin-top: 0;
 
-    @media (max-width: 768px) {
+    @media (max-width: $sm) {      
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    @media (max-width: $md) {
         font-size: 32px;
         line-height: 38px;
     }
