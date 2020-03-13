@@ -1095,8 +1095,9 @@ textarea::placeholder {
 
 .catalog__header .header-sort__btn {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   cursor: pointer;
+  width: 100%;
 }
 
 .catalog__header .header-sort__btn--less .header-sort__icon {
