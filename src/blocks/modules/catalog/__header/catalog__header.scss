@@ -66,8 +66,9 @@
 
         &__btn {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             cursor: pointer;
+            width: 100%;
 
             &--less {
                 .header-sort__icon {
