@@ -1,5 +1,10 @@
 .catalog__filter
 	form.catalog__filter-form
+		.catalog__filter-form-mobile
+			.catalog__filter-form-mobile-title Фильтр
+			button.button.catalog__filter-form-mobile-close.catalog__filter-close-link(type="button")
+				span
+				span
 		.catalog__filter-item
 			.catalog__filter-title Цена за сутки,₽
 			.catalog__filter-inputs--wrapper
@@ -23,5 +28,5 @@
 				+input__checkbox("equipment_4", "catalog__filter", "equipment_4", "", "Игровой-комплекс")
 				+input__checkbox("equipment_5", "catalog__filter", "equipment_5", "", "Домик")
 		.catalog__filter-item.catalog__filter-item--btns
-			button.catalog__filter-btn.button.button--block.button--yellow(type="submit") Применить
+			button.catalog__filter-btn.button.button--block.button--yellow.catalog__filter-close-link(type="submit") Применить
 			button.catalog__filter-btn.button.button--block.button--yellow-border(type="reset") Сбросить фильтр

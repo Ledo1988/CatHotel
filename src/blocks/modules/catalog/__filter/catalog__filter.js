@@ -1,13 +1,17 @@
-modules.define('catalogue__filter', ['i-bem-dom'], function(provide, bemDom) {
+import $ from "jquery";
 
-provide(bemDom.declElem('catalogue', 'filter', {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
+$(document).ready(function() {
+
+    $('body').on('click', '.catalog__mobile-btn', function() {
+        $('body .catalog__filter ').toggleClass('open');
+        $('body').toggleClass('overflow-hidden');
+        $('html').toggleClass('overflow-hidden');
+    });
+
+    $('body').on('click', '.catalog__filter-close-link', function() {
+        $('body .catalog__filter ').toggleClass('open');
+        $('body').toggleClass('overflow-hidden');
+        $('html').toggleClass('overflow-hidden');
+    });
 
 });

@@ -4,6 +4,14 @@
     justify-content: space-between;
     margin-bottom: 60px;
 
+    @media (max-width: 768px) {
+        margin-bottom: 40px;
+    }
+
+    &-title {
+        margin-bottom: 0;
+    }
+
     .header-sort {
         position: relative;
         width: 175px;
