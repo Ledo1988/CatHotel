@@ -1,0 +1,79 @@
+- var itemImg;
+- var itemTitle;
+- var itemSize;
+- var itemSquare;
+- var itemRate;
+- var itemOptions;
+
+.catalog__item(data-square=itemSquare data-rate=itemRate)
+	.catalog__item--wrapper
+		a.catalog__item-img(href="#")
+			img(src=itemImg width="270" height="185" alt=itemTitle)
+		.catalog__item-info
+			.catalog__item-title=itemTitle
+			.catalog__item-desc
+				.catalog__item-desc-row
+					span.catalog__item-desc-title
+						| Размеры (ШхГхВ) - #{itemSize} см
+				.catalog__item-desc-row
+					span.catalog__item-desc-title
+						| Площадь - #{itemSquare} м2
+				.catalog__item-desc-row
+					span.catalog__item-desc-title
+						| Оснащение номера
+					ul.catalog__item-options
+						case itemOptions
+							when 'box, claw'
+								li.catalog__item-option
+									.catalog__item-option-title Лежак
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-box")
+								li.catalog__item-option
+									.catalog__item-option-title Когтеточка
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-claw")
+							when 'box, claw, clew'
+								li.catalog__item-option
+									.catalog__item-option-title Лежак
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-box")
+								li.catalog__item-option
+									.catalog__item-option-title Когтеточка
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-claw")
+								li.catalog__item-option
+									.catalog__item-option-title Игровой-комплекс
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-clew")
+							when 'all'
+								li.catalog__item-option
+									.catalog__item-option-title Лежак
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-box")
+								li.catalog__item-option
+									.catalog__item-option-title Когтеточка
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-claw")
+								li.catalog__item-option
+									.catalog__item-option-title Игровой-комплекс
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-clew")
+								li.catalog__item-option
+									.catalog__item-option-title Домик
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-house")
+							default
+								li.catalog__item-option
+									.catalog__item-option-title Пустой номер
+									svg(class="icon catalog__item-option-icon")
+										use(xlink:href="/img/sprites/sprite.svg#ico_option-no")
+				.catalog__item-desc-row.catalog__item-desc-row--rate
+					span.catalog__item-desc-title
+						| Цена за сутки:
+					span.catalog__item-rate
+						| #{itemRate}₽
+			a.catalog__item-btn.button.button--block.button--orange(href="#")
+				span.catalog__item-btn-title Забронировать
+				span.catalog__item-btn-icon
+					svg(class="icon catalog__item-btn-icon-svg")
+						use(xlink:href="/img/sprites/sprite.svg#ico_paw")

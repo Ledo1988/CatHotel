@@ -72,6 +72,12 @@
     &-btn {
         margin-bottom: $grid-unit*3;
 
+        &[type="reset"] {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .2s ease-in-out;
+        }
+
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -91,6 +97,13 @@
     }
 
     &-form {
+        &.not-empty {
+            .catalog__filter-btn[type="reset"] {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
         @media (max-width: $md) {
             padding: $grid-unit*3;
         }
