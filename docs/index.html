@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CatHotel</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header--wrapper">
+        <div class="header__logo"><a class="header__logo-link" href="/">
+            <svg class="icon header__logo-icon">
+              <use xlink:href="/img/sprites/sprite.svg#ico_logo"></use>
+            </svg></a></div>
+        <nav class="header__nav">
+          <div class="header__nav-burger burger-menu"><span></span><span></span><span></span></div>
+          <ul class="header__nav-list nav-list">
+            <li class="nav-list__item"><a class="nav-list__item-link" href="#">Почему мы?</a></li>
+            <li class="nav-list__item"><a class="nav-list__item-link" href="#">Номера</a></li>
+            <li class="nav-list__item"><a class="nav-list__item-link" href="#">Отзывы</a></li>
+            <li class="nav-list__item"><a class="nav-list__item-link" href="#">Как нас найти</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="catalog">
+        <div class="catalog--wrapper">
+          <div class="catalog__header">
+            <h1 class="catalog__header-title">Наши номера</h1>
+            <div class="catalog__header-sort header-sort">
+              <div class="header-sort--wrapper">
+                <ul class="header-sort__list">
+                  <li class="header-sort__list-item active">
+                    <button class="btn header-sort__btn" data-sort="square:descc" type="button"><span class="header-sort__icon">
+                        <svg class="icon header-sort__icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_arrow-up"></use>
+                        </svg></span><span class="header-sort__title">По площади</span></button>
+                  </li>
+                  <li class="header-sort__list-item">
+                    <button class="btn header-sort__btn header-sort__btn--less" data-sort="square:asc" type="button"><span class="header-sort__icon">
+                        <svg class="icon header-sort__icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_arrow-up"></use>
+                        </svg></span><span class="header-sort__title">По площади</span></button>
+                  </li>
+                  <li class="header-sort__list-item">
+                    <button class="btn header-sort__btn" data-sort="rate:desc" type="button"><span class="header-sort__icon">
+                        <svg class="icon header-sort__icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_arrow-up"></use>
+                        </svg></span><span class="header-sort__title">По цене</span></button>
+                  </li>
+                  <li class="header-sort__list-item">
+                    <button class="btn header-sort__btn header-sort__btn--less" data-sort="rate:asc" type="button"><span class="header-sort__icon">
+                        <svg class="icon header-sort__icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_arrow-up"></use>
+                        </svg></span><span class="header-sort__title">По цене</span></button>
+                  </li>
+                </ul><span class="header-sort__header-up">
+                  <svg class="icon header-sort__header-up-icon">
+                    <use xlink:href="/img/sprites/sprite.svg#ico_up"></use>
+                  </svg></span>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__content">
+            <div class="catalog__mobile">
+              <button class="button button--block button--yellow catalog__mobile-btn" type="button">Фильтр</button>
+            </div>
+            <div class="catalog__filter">
+              <form class="catalog__filter-form">
+                <div class="catalog__filter-form-mobile">
+                  <div class="catalog__filter-form-mobile-title">Фильтр</div>
+                  <button class="button catalog__filter-form-mobile-close catalog__filter-close-link" type="button"><span></span><span></span></button>
+                </div>
+                <div class="catalog__filter-item">
+                  <div class="catalog__filter-title">Цена за сутки,₽</div>
+                  <div class="catalog__filter-inputs--wrapper">
+                    <div class="label-content catalog__filter-label-content">
+                      <label class="catalog__filter-label" for="min-rate">
+                        <input class="catalog__filter-input" id="min-rate" value="" type="number" name="min-rate"/>
+                      </label>
+                    </div>
+                    <div class="label-content catalog__filter-label-content">
+                      <label class="catalog__filter-label" for="max-rate">
+                        <input class="catalog__filter-input" id="max-rate" value="" type="number" name="max-rate"/>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__filter-item">
+                  <div class="catalog__filter-title">Площадь</div>
+                  <div class="catalog__filter-checkboxes--wrapper">
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="square_1" type="checkbox" name="square_1" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="square_1"><span class="checkbox__title catalog__filter-checkbox-title">0,63 м2</span></label>
+                    </div>
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="square_2" type="checkbox" name="square_2" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="square_2"><span class="checkbox__title catalog__filter-checkbox-title">0,90 м2</span></label>
+                    </div>
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="square_3" type="checkbox" name="square_3" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="square_3"><span class="checkbox__title catalog__filter-checkbox-title">1,13 м2</span></label>
+                    </div>
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="square_4" type="checkbox" name="square_4" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="square_4"><span class="checkbox__title catalog__filter-checkbox-title">1,56 м2</span></label>
+                    </div>
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="square_5" type="checkbox" name="square_5" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="square_5"><span class="checkbox__title catalog__filter-checkbox-title">2,56 м2</span></label>
+                    </div>
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="square_6" type="checkbox" name="square_6" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="square_6"><span class="checkbox__title catalog__filter-checkbox-title">2,88 м2</span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__filter-item">
+                  <div class="catalog__filter-title">Оснащение номера</div>
+                  <div class="catalog__filter-checkboxes--wrapper">
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="equipment_1" type="checkbox" name="equipment_1" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="equipment_1"><span class="checkbox__title catalog__filter-checkbox-title">Пустой номер</span></label>
+                    </div>
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="equipment_2" type="checkbox" name="equipment_2" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="equipment_2"><span class="checkbox__title catalog__filter-checkbox-title">Лежак</span></label>
+                    </div>
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="equipment_3" type="checkbox" name="equipment_3" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="equipment_3"><span class="checkbox__title catalog__filter-checkbox-title">Когтеточка</span></label>
+                    </div>
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="equipment_4" type="checkbox" name="equipment_4" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="equipment_4"><span class="checkbox__title catalog__filter-checkbox-title">Игровой-комплекс</span></label>
+                    </div>
+                    <div class="checkbox catalog__filter-checkbox">
+                      <input class="checkbox__input catalog__filter-checkbox-input" id="equipment_5" type="checkbox" name="equipment_5" value=""/>
+                      <label class="checkbox__label catalog__filter-checkbox-label" for="equipment_5"><span class="checkbox__title catalog__filter-checkbox-title">Домик</span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__filter-item catalog__filter-item--btns">
+                  <button class="catalog__filter-btn button button--block button--yellow catalog__filter-close-link" type="submit">Применить</button>
+                  <button class="catalog__filter-btn button button--block button--yellow-border" type="reset">Сбросить фильтр</button>
+                </div>
+              </form>
+            </div>
+            <div class="catalog__items">
+              <div class="catalog__item" data-square="0,63" data-rate="100">
+                <div class="catalog__item--wrapper"><a class="catalog__item-img" href="#"><img src="img/img/img_catalog-1.jpg" width="270" height="185" alt="Эконом"></a>
+                  <div class="catalog__item-info">
+                    <div class="catalog__item-title">Эконом</div>
+                    <div class="catalog__item-desc">
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Размеры (ШхГхВ) - 90х70х180 см</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Площадь - 0,63 м2</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Оснащение номера</span>
+                        <ul class="catalog__item-options">
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Пустой номер</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-no"></use>
+                            </svg>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="catalog__item-desc-row catalog__item-desc-row--rate"><span class="catalog__item-desc-title">Цена за сутки:</span><span class="catalog__item-rate">100₽</span></div>
+                    </div><a class="catalog__item-btn button button--block button--orange" href="#"><span class="catalog__item-btn-title">Забронировать</span><span class="catalog__item-btn-icon">
+                        <svg class="icon catalog__item-btn-icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_paw"></use>
+                        </svg></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__item" data-square="0,90" data-rate="200">
+                <div class="catalog__item--wrapper"><a class="catalog__item-img" href="#"><img src="img/img/img_catalog-2.jpg" width="270" height="185" alt="Эконом плюс"></a>
+                  <div class="catalog__item-info">
+                    <div class="catalog__item-title">Эконом плюс</div>
+                    <div class="catalog__item-desc">
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Размеры (ШхГхВ) - 90х100х180 см</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Площадь - 0,90 м2</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Оснащение номера</span>
+                        <ul class="catalog__item-options">
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Лежак</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-box"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Когтеточка</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-claw"></use>
+                            </svg>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="catalog__item-desc-row catalog__item-desc-row--rate"><span class="catalog__item-desc-title">Цена за сутки:</span><span class="catalog__item-rate">200₽</span></div>
+                    </div><a class="catalog__item-btn button button--block button--orange" href="#"><span class="catalog__item-btn-title">Забронировать</span><span class="catalog__item-btn-icon">
+                        <svg class="icon catalog__item-btn-icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_paw"></use>
+                        </svg></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__item" data-square="1,13" data-rate="250">
+                <div class="catalog__item--wrapper"><a class="catalog__item-img" href="#"><img src="img/img/img_catalog-3.jpg" width="270" height="185" alt="Комфорт"></a>
+                  <div class="catalog__item-info">
+                    <div class="catalog__item-title">Комфорт</div>
+                    <div class="catalog__item-desc">
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Размеры (ШхГхВ) - 100х125х180 см</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Площадь - 1,13 м2</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Оснащение номера</span>
+                        <ul class="catalog__item-options">
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Лежак</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-box"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Когтеточка</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-claw"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Игровой-комплекс</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-clew"></use>
+                            </svg>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="catalog__item-desc-row catalog__item-desc-row--rate"><span class="catalog__item-desc-title">Цена за сутки:</span><span class="catalog__item-rate">250₽</span></div>
+                    </div><a class="catalog__item-btn button button--block button--orange" href="#"><span class="catalog__item-btn-title">Забронировать</span><span class="catalog__item-btn-icon">
+                        <svg class="icon catalog__item-btn-icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_paw"></use>
+                        </svg></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__item" data-square="1,56" data-rate="350">
+                <div class="catalog__item--wrapper"><a class="catalog__item-img" href="#"><img src="img/img/img_catalog-4.jpg" width="270" height="185" alt="Сьют"></a>
+                  <div class="catalog__item-info">
+                    <div class="catalog__item-title">Сьют</div>
+                    <div class="catalog__item-desc">
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Размеры (ШхГхВ) - 125х125х180 см</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Площадь - 1,56 м2</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Оснащение номера</span>
+                        <ul class="catalog__item-options">
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Лежак</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-box"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Когтеточка</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-claw"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Игровой-комплекс</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-clew"></use>
+                            </svg>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="catalog__item-desc-row catalog__item-desc-row--rate"><span class="catalog__item-desc-title">Цена за сутки:</span><span class="catalog__item-rate">350₽</span></div>
+                    </div><a class="catalog__item-btn button button--block button--orange" href="#"><span class="catalog__item-btn-title">Забронировать</span><span class="catalog__item-btn-icon">
+                        <svg class="icon catalog__item-btn-icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_paw"></use>
+                        </svg></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__item" data-square="2,56" data-rate="500">
+                <div class="catalog__item--wrapper"><a class="catalog__item-img" href="#"><img src="img/img/img_catalog-5.jpg" width="270" height="185" alt="Люкс"></a>
+                  <div class="catalog__item-info">
+                    <div class="catalog__item-title">Люкс</div>
+                    <div class="catalog__item-desc">
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Размеры (ШхГхВ) - 160х160х180 см</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Площадь - 2,56 м2</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Оснащение номера</span>
+                        <ul class="catalog__item-options">
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Лежак</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-box"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Когтеточка</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-claw"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Игровой-комплекс</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-clew"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Домик</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-house"></use>
+                            </svg>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="catalog__item-desc-row catalog__item-desc-row--rate"><span class="catalog__item-desc-title">Цена за сутки:</span><span class="catalog__item-rate">500₽</span></div>
+                    </div><a class="catalog__item-btn button button--block button--orange" href="#"><span class="catalog__item-btn-title">Забронировать</span><span class="catalog__item-btn-icon">
+                        <svg class="icon catalog__item-btn-icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_paw"></use>
+                        </svg></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__item" data-square="2,88" data-rate="600">
+                <div class="catalog__item--wrapper"><a class="catalog__item-img" href="#"><img src="img/img/img_catalog-6.jpg" width="270" height="185" alt="Супер-Люкс"></a>
+                  <div class="catalog__item-info">
+                    <div class="catalog__item-title">Супер-Люкс</div>
+                    <div class="catalog__item-desc">
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Размеры (ШхГхВ) - 180х160х180 см</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Площадь - 2,88 м2</span></div>
+                      <div class="catalog__item-desc-row"><span class="catalog__item-desc-title">Оснащение номера</span>
+                        <ul class="catalog__item-options">
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Лежак</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-box"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Когтеточка</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-claw"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Игровой-комплекс</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-clew"></use>
+                            </svg>
+                          </li>
+                          <li class="catalog__item-option">
+                            <div class="catalog__item-option-title">Домик</div>
+                            <svg class="icon catalog__item-option-icon">
+                              <use xlink:href="/img/sprites/sprite.svg#ico_option-house"></use>
+                            </svg>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="catalog__item-desc-row catalog__item-desc-row--rate"><span class="catalog__item-desc-title">Цена за сутки:</span><span class="catalog__item-rate">600₽</span></div>
+                    </div><a class="catalog__item-btn button button--block button--orange" href="#"><span class="catalog__item-btn-title">Забронировать</span><span class="catalog__item-btn-icon">
+                        <svg class="icon catalog__item-btn-icon-svg">
+                          <use xlink:href="/img/sprites/sprite.svg#ico_paw"></use>
+                        </svg></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/vendor.js"></script>
+  </body>
+</html>
