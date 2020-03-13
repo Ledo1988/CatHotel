@@ -49,6 +49,10 @@ $(document).ready(function() {
 
     $(".header-sort__list").numericFlexboxSorting();
 
+    $("body .header-sort__header-up").on('click', function () {
+        $(this).parents('.header-sort').toggleClass('active');
+    });
+
     $('body').on('click', '.header-sort__btn', function () {
         $(this).parents('.header-sort').find('.header-sort__list-item').removeClass('active');
         $(this).parents('.header-sort__list-item').addClass('active');

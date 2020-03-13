@@ -290,6 +290,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   })(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header-sort__list").numericFlexboxSorting();
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()("body .header-sort__header-up").on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.header-sort').toggleClass('active');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('click', '.header-sort__btn', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.header-sort').find('.header-sort__list-item').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.header-sort__list-item').addClass('active');

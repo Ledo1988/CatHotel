@@ -46,6 +46,7 @@
             height: 6px;
             transform: rotate(180deg);
             transition: $transition;
+            cursor: pointer;
 
             @media (max-width: $md) {
                 right: 10px;
